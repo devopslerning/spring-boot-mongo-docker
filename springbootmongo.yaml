@@ -1,14 +1,14 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: ReplicationController
 metadata:
-  name: springbootapp
+  name: springbootapprc
 spec:
   replicas: 2
-  strategy:
-    type: Recreate
-  selector:
-    matchLabels:
-      app: springbootapp
+  #strategy:
+    #type: Recreate
+  #selector:
+    #matchLabels:
+      #app: springbootapp
   template:
     metadata:
       name: springbootapppod
